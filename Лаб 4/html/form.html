@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Робота з формами</title>
+</head>
+<body>
+    <h1>Демонстрація роботи з формами</h1>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Головна</a></li>
+            <li><a href="text.html">Робота з текстом</a></li>
+            <li><a href="lists.html">Списки</a></li>
+            <li><a href="links.html">Гіперпосилання</a></li>
+            <li><a href="images.html">Зображення</a></li>
+            <li><a href="table.html">Таблиця</a></li>
+            <li><a href="form.html">Форма</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <main>
+        <h2>Форма зворотного зв'язку</h2>
+
+        <form action="#" method="post"> <fieldset>
+                <legend>Особисті дані:</legend>
+
+                <label for="name">Ім'я:</label><br>
+                <input type="text" id="name" name="user_name" placeholder="Ваше ім'я" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="user_email" placeholder="ваш.email@example.com" required><br><br>
+
+                <label for="phone">Телефон:</label><br>
+                <input type="tel" id="phone" name="user_phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="XXX-XXX-XXXX"><br>
+                <small>Формат: 098-123-4567</small><br><br>
+
+                <label for="birthdate">Дата народження:</label><br>
+                <input type="date" id="birthdate" name="user_birthdate"><br><br>
+
+                <label for="gender">Стать:</label><br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Чоловіча</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Жіноча</label><br>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Інша</label><br><br>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Ваше повідомлення:</legend>
+
+                <label for="subject">Тема:</label><br>
+                <input type="text" id="subject" name="message_subject" list="subjects_list" placeholder="Оберіть або введіть тему"><br>
+                <datalist id="subjects_list">
+                    <option value="Запитання щодо продукту">
+                    <option value="Технічна підтримка">
+                    <option value="Пропозиція співпраці">
+                    <option value="Відгук">
+                </datalist><br><br>
+
+                <label for="message">Повідомлення:</label><br>
+                <textarea id="message" name="user_message" rows="5" cols="40" placeholder="Введіть ваше повідомлення тут..."></textarea><br><br>
+
+                <label for="priority">Пріоритет:</label><br>
+                <select id="priority" name="message_priority">
+                    <option value="low">Низький</option>
+                    <option value="medium" selected>Середній</option>
+                    <option value="high">Високий</option>
+                </select><br><br>
+
+                <input type="checkbox" id="subscribe" name="subscribe" value="yes" checked>
+                <label for="subscribe">Підписатися на розсилку новин</label><br><br>
+
+            </fieldset>
+
+            <input type="submit" value="Надіслати">
+            <input type="reset" value="Очистити форму">
+        </form>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2025 Корольов Михайло.</p>
+    </footer>
+
+</body>
+</html>
